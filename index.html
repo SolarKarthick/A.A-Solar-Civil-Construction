@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.A Solar & Civil Construction - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        
+        .slide.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #667eea;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3 md:py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2 md:space-x-4">
+                    <i class="fas fa-solar-panel text-2xl md:text-3xl text-purple-600"></i>
+                    <div>
+                        <h1 class="text-base md:text-2xl font-bold text-gray-800">A.A Solar & Civil Construction</h1>
+                        <p class="text-xs md:text-sm text-gray-600 hidden sm:block">Excellence in Construction & Solar Solutions</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-purple-600">About</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-purple-600">Projects</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-purple-600">Services</a>
+                    <a href="#work" class="nav-link text-gray-700 hover:text-purple-600">work</a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl md:text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden fixed inset-0 bg-black bg-opacity-50 z-[60]">
+        <div class="bg-white w-64 h-full p-6 shadow-2xl">
+            <button id="closeMobileMenu" class="mb-6 text-gray-700 hover:text-purple-600">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="mobile-link text-lg text-gray-700 hover:text-purple-600 py-2 border-b border-gray-200">Home</a>
+                <a href="#about" class="mobile-link text-lg text-gray-700 hover:text-purple-600 py-2 border-b border-gray-200">About</a>
+                <a href="#projects" class="mobile-link text-lg text-gray-700 hover:text-purple-600 py-2 border-b border-gray-200">Projects</a>
+                <a href="#services" class="mobile-link text-lg text-gray-700 hover:text-purple-600 py-2 border-b border-gray-200">Services</a>
+                <a href="#work" class="mobile-link text-lg text-gray-700 hover:text-purple-600 py-2 border-b border-gray-200">work</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+
+<section id="home" class="pt-20 md:pt-24 mt-10 gradient-bg text-white py-5 md:py-15">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-5xl font-bold mb-4">Building Tomorrow's Infrastructure Today</h2>
+    <p class="text-base md:text-xl mb-8">Professional Civil Engineering & Solar Solutions</p>
+    
+    <a href="https://wa.me/919095851522?text=Hello!%20I%20would%20like%20to%20get%20a%20quote%20for%20your%20services."
+       target="_blank"
+       class="bg-green-500 hover:bg-green-600 text-white px-6 md:px-8 py-3 rounded-full font-semibold transition inline-flex items-center gap-2">
+      <i class="fab fa-whatsapp text-xl"></i>
+      Get a Quote
+    </a>
+  </div>
+</section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="py-12 md:py-10 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-gray-800">About Us</h2>
+                    <p class="text-sm md:text-base text-gray-600 mb-4 leading-relaxed">
+                        Welcome to A.A Solar & Civil Construction, where innovation meets excellence. Led by <strong>T. Karthick Raja</strong>, a qualified Civil Engineer and proprietor, we specialize in delivering top-tier civil construction and solar energy solutions.
+                    </p>
+                    <p class="text-sm md:text-base text-gray-600 mb-6 leading-relaxed">
+                        Located in Kurinjipadi, Cuddalore, Tamil Nadu, we are committed to building sustainable infrastructure and providing renewable energy solutions that stand the test of time.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-purple-50 p-3 md:p-4 rounded-lg">
+                            <i class="fas fa-award text-2xl md:text-3xl text-purple-600 mb-2"></i>
+                            <h3 class="text-sm md:text-base font-semibold text-gray-800">Certified Professional</h3>
+                        </div>
+                        <div class="bg-purple-50 p-3 md:p-4 rounded-lg">
+                            <i class="fas fa-users text-2xl md:text-3xl text-purple-600 mb-2"></i>
+                            <h3 class="text-sm md:text-base font-semibold text-gray-800">Expert Team</h3>
+                        </div>
+                    </div>
+                </div>
+               <div class="bg-gray-100 p-6 md:p-8 rounded-lg text-center">
+  <!-- Profile Picture -->
+  <div class="flex justify-center mb-4">
+    <img src="assets\images\profile\Profilepicture.png" alt="T. Karthick Raja" 
+         class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-purple-600 shadow-lg">
+  </div>
+
+  <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-800">Proprietor Details</h3>
+
+  <div class="space-y-3 text-left">
+    <div class="flex items-center space-x-3">
+      <i class="fas fa-user text-purple-600"></i>
+      <span class="text-sm md:text-base text-gray-700"><strong>Name:</strong> T. Karthick Raja</span>
+    </div>
+    <div class="flex items-center space-x-3">
+      <i class="fas fa-hard-hat text-purple-600"></i>
+      <span class="text-sm md:text-base text-gray-700"><strong>Qualification:</strong> Civil Engineer</span>
+    </div>
+    <div class="flex items-center space-x-3">
+      <i class="fas fa-id-card text-purple-600"></i>
+      <span class="text-sm md:text-base text-gray-700"><strong>PAN:</strong> DRFPK8354A</span>
+    </div>
+    <div class="flex items-center space-x-3">
+      <i class="fas fa-phone text-purple-600"></i>
+      <span class="text-sm md:text-base text-gray-700"><strong>Phone:</strong> +91 90958 51522</span>
+    </div>
+    <div class="flex items-center space-x-3">
+      <i class="fab fa-whatsapp text-purple-600"></i>
+      <span class="text-sm md:text-base text-gray-700"><strong>WhatsApp:</strong> +91 90958 51522 / +91 84386 05240</span>
+    </div>
+    <div class="flex items-center space-x-3">
+      <i class="fas fa-envelope text-purple-600"></i>
+      <span class="text-xs md:text-base text-gray-700 break-all"><strong>Email:</strong> dhanukarthi21196@gmail.com</span>
+    </div>
+  </div>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Slider Section -->
+    <section id="projects" class="py-12 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-gray-800">Our Projects</h2>
+            
+            <div class="slider-container max-w-4xl mx-auto bg-white rounded-lg shadow-xl p-4 md:p-6">
+                <div id="slider" class="relative">
+                    <!-- Slides will be generated by JavaScript -->
+                </div>
+                
+                <div class="flex justify-between items-center mt-4 md:mt-6 gap-2">
+                    <button id="prevBtn" class="bg-purple-600 text-white px-3 md:px-6 py-2 rounded-lg hover:bg-purple-700 transition text-sm md:text-base">
+                        <i class="fas fa-arrow-left"></i> <span class="hidden sm:inline">Previous</span>
+                    </button>
+                    <div id="slideCounter" class="text-gray-600 font-semibold text-sm md:text-base"></div>
+                    <button id="nextBtn" class="bg-purple-600 text-white px-3 md:px-6 py-2 rounded-lg hover:bg-purple-700 transition text-sm md:text-base">
+                        <span class="hidden sm:inline">Next</span> <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12 md:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-gray-800">Our Services</h2>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-gradient-to-br from-purple-50 to-blue-50 p-6 md:p-8 rounded-lg hover-scale shadow-lg">
+                    <i class="fas fa-building text-4xl md:text-5xl text-purple-600 mb-4"></i>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-800">Civil Construction</h3>
+                    <p class="text-sm md:text-base text-gray-600">Complete building construction services including residential, commercial, and industrial projects with quality assurance.</p>
+                </div>
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 md:p-8 rounded-lg hover-scale shadow-lg">
+                    <i class="fas fa-solar-panel text-4xl md:text-5xl text-orange-600 mb-4"></i>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-800">Solar Solutions</h3>
+                    <p class="text-sm md:text-base text-gray-600">Professional solar panel installation and renewable energy solutions for sustainable power generation.</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-teal-50 p-6 md:p-8 rounded-lg hover-scale shadow-lg">
+                    <i class="fas fa-work text-4xl md:text-5xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-800">Renovation & Repair</h3>
+                    <p class="text-sm md:text-base text-gray-600">Expert renovation and repair services to restore and upgrade existing structures to modern standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Our Work Section -->
+<section id="work" class="py-20 bg-gray-100 text-gray-800">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12 text-purple-700">We Have Different Types of Work</h2>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img src="assets/images/tool/tool1.jpg" alt="Pilling Alignment" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold mb-2 text-purple-700">Pilling Alignment</h3>
+          <p>High-precision piling alignment for stable and durable foundations.</p>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img src="assets/images/tool/tool2.jpg" alt="MMS Work" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold mb-2 text-purple-700">MMS Work</h3>
+          <p>Expert MMS installation for solar mounting and structural integrity.</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img src="assets/images/tool/tool3.jpg" alt="Inverter" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold mb-2 text-purple-700">Inverter</h3>
+          <p>Reliable inverter installation ensuring consistent solar power output.</p>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img src="assets/images/tool/tool4.jpg" alt="MCR & Inverter Building Work" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold mb-2 text-purple-700">MCR & Inverter Building Work</h3>
+          <p>Custom-built inverter and MCR rooms designed for durability and safety.</p>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img src="assets/images/tool/tool5.jpg" alt="AC and DC Work" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold mb-2 text-purple-700">AC & DC Work</h3>
+          <p>Professional handling of both AC and DC electrical installations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Map Section -->
+<section class="py-12 bg-gray-50 text-center mb-10">
+  <h2 class="text-3xl md:text-4xl font-bold text-purple-700 mb-6">
+     Visit My Office Address
+  </h2>
+
+  <div class="flex justify-center">
+    <div class="w-full max-w-5xl px-4">
+      <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3908.913244629212!2d79.58823517505351!3d11.558076888642189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDMzJzI5LjEiTiA3OcKwMzUnMjYuOSJF!5e0!3m2!1sen!2sin!4v1762595893949!5m2!1sen!2sin"
+          class="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg border-0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+<footer class="bg-gray-900 text-white py-4 fixed bottom-0 left-0 w-full z-40">
+  <div class="container mx-auto px-4 text-center">
+    <p class="text-white-400">Thanks and Regards M. Balamurugan & Karthick</p>
+    
+  </div>
+</footer>
+
+    <script>
+        // Project data with placeholder images
+        const projects = [
+            {
+                title: "Residential Villa Construction",
+                description: "Modern 3BHK villa with contemporary design and sustainable materials",
+                image: "assets/images/work/first.jpg"
+            },
+            {
+                title: "Solar Panel Installation",
+                description: "5kW solar system installation for commercial building",
+                image: "assets/images/work/second.jpg"
+            },
+            {
+                title: "Commercial Complex",
+                description: "Multi-story commercial building with modern amenities",
+                image: "assets/images/work/third.jpg"
+            },
+            {
+                title: "Industrial Warehouse",
+                description: "Large-scale warehouse construction with steel structure",
+                image: "assets/images/work/four.jpg"
+            },
+            {
+                title: "Residential Renovation",
+                description: "Complete home renovation with modern interiors",
+                image: "assets/images/work/five.jpg"
+            },
+            {
+                title: "Solar Farm Project",
+                description: "Large-scale solar farm installation for renewable energy",
+                image: "assets/images/work/six.jpg"
+            }
+        ];
+
+        let currentSlide = 0;
+
+        // Initialize slider
+        function initSlider() {
+            const slider = document.getElementById('slider');
+            slider.innerHTML = projects.map((project, index) => `
+                <div class="slide ${index === 0 ? 'active' : ''}">
+                    <img src="${project.image}" alt="${project.title}" class="w-full h-96 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">${project.title}</h3>
+                    <p class="text-gray-600">${project.description}</p>
+                </div>
+            `).join('');
+            updateSlideCounter();
+        }
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            if (n >= slides.length) currentSlide = 0;
+            if (n < 0) currentSlide = slides.length - 1;
+            
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                }
+            });
+            updateSlideCounter();
+        }
+
+        function updateSlideCounter() {
+            document.getElementById('slideCounter').textContent = `${currentSlide + 1} / ${projects.length}`;
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentSlide--;
+            showSlide(currentSlide);
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentSlide++;
+            showSlide(currentSlide);
+        });
+
+        // Auto advance slides
+        setInterval(() => {
+            currentSlide++;
+            showSlide(currentSlide);
+        }, 5000);
+
+        
+        
+
+        // Mobile menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.remove('hidden');
+        });
+
+        document.getElementById('closeMobileMenu').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.add('hidden');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.getElementById('mobileMenu').classList.add('hidden');
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        function scrollToWork() {
+            document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Initialize
+        initSlider();
+    </script>
+</body>
+</html>
