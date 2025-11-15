@@ -146,15 +146,11 @@
                     </div>
                 </div>
                <div class="bg-gray-100 p-6 md:p-8 rounded-lg text-center">
-  <!-- Profile Picture -->
-  <div class="flex justify-center mb-4">
-    <img src="assets\images\profile\Profilepicture.png" alt="T. Karthick Raja" 
-         class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-purple-600 shadow-lg">
-  </div>
+
 
   <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-800">Proprietor Details</h3>
 
- <div class="bg-gray-100 p-6 md:p-8 rounded-lg text-center">
+<div class="bg-gray-100 p-6 md:p-8 rounded-lg text-center">
   <!-- Profile Picture -->
   <div class="flex justify-center mb-4">
     <img src="assets\images\profile\Profilepicture.png" alt="T. Karthick Raja" 
@@ -165,41 +161,49 @@
 
   <div class="space-y-3 text-left">
     <div class="flex items-center space-x-3">
-      <i class="fas fa-user text-purple-600"></i>
+      <i class="fas fa-user text-purple-600 flex-shrink-0"></i>
       <span class="text-sm md:text-base text-gray-700"><strong>Name:</strong> T. Karthick Raja</span>
     </div>
+    
     <div class="flex items-center space-x-3">
-      <i class="fas fa-hard-hat text-purple-600"></i>
+      <i class="fas fa-hard-hat text-purple-600 flex-shrink-0"></i>
       <span class="text-sm md:text-base text-gray-700"><strong>Qualification:</strong> Civil Engineer</span>
     </div>
-    <div class="flex items-center justify-between">
+    
+    <!-- PAN Section -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
       <div class="flex items-center space-x-3">
-        <i class="fas fa-id-card text-purple-600"></i>
+        <i class="fas fa-id-card text-purple-600 flex-shrink-0"></i>
         <span class="text-sm md:text-base text-gray-700"><strong>PAN:</strong> DRFPK8354A</span>
       </div>
-      <a href="assets/documents/pan.pdf" download class="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded text-xs md:text-sm transition inline-flex items-center gap-1">
-        <i class="fas fa-download"></i> Download
+      <a href="assets/documents/pan.pdf" download class="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1.5 rounded text-xs md:text-sm transition inline-flex items-center justify-center gap-1 self-start sm:self-auto">
+        <i class="fas fa-download"></i> <span>Download</span>
       </a>
     </div>
-    <div class="flex items-center justify-between">
+    
+    <!-- Aadhar Section -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
       <div class="flex items-center space-x-3">
-        <i class="fas fa-id-card-alt text-purple-600"></i>
+        <i class="fas fa-id-card-alt text-purple-600 flex-shrink-0"></i>
         <span class="text-sm md:text-base text-gray-700"><strong>Aadhar:</strong> 411221133112</span>
       </div>
-      <a href="assets/documents/aadhar.pdf" download class="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded text-xs md:text-sm transition inline-flex items-center gap-1">
-        <i class="fas fa-download"></i> Download
+      <a href="assets/documents/aadhar.pdf" download class="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1.5 rounded text-xs md:text-sm transition inline-flex items-center justify-center gap-1 self-start sm:self-auto">
+        <i class="fas fa-download"></i> <span>Download</span>
       </a>
     </div>
+    
     <div class="flex items-center space-x-3">
-      <i class="fas fa-phone text-purple-600"></i>
+      <i class="fas fa-phone text-purple-600 flex-shrink-0"></i>
       <span class="text-sm md:text-base text-gray-700"><strong>Phone:</strong> +91 90958 51522</span>
     </div>
-    <div class="flex items-center space-x-3">
-      <i class="fab fa-whatsapp text-purple-600"></i>
+    
+    <div class="flex items-start space-x-3">
+      <i class="fab fa-whatsapp text-purple-600 flex-shrink-0 mt-1"></i>
       <span class="text-sm md:text-base text-gray-700"><strong>WhatsApp:</strong> +91 90958 51522 / +91 84386 05240</span>
     </div>
-    <div class="flex items-center space-x-3">
-      <i class="fas fa-envelope text-purple-600"></i>
+    
+    <div class="flex items-start space-x-3">
+      <i class="fas fa-envelope text-purple-600 flex-shrink-0 mt-1"></i>
       <span class="text-xs md:text-base text-gray-700 break-all"><strong>Email:</strong> dhanukarthi21196@gmail.com</span>
     </div>
   </div>
