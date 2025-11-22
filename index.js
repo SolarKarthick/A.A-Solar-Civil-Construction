@@ -99,35 +99,27 @@ const precisionInstruments = [
 // Project data
 const projects = [
   {
-    title: "Residential Villa Construction",
-    description: "Modern 3BHK villa with contemporary design and sustainable materials",
-    image: "assets/images/work/first.jpg"
-  },
+  "title": "Land Survey Pile Point Marking",
+  "description": "Accurate land surveying and pile point marking for solar installations, ensuring optimal panel placement and maximum energy efficiency.",
+  "image": "assets/images/work/solar-survey.jpg"
+}
+,
+ {
+  "title": "Piling Work",
+  "description": "Installation of a solar panel foundation system, including the main control room and inverter control room for efficient energy management.",
+  "image": "assets/images/work/solar-foundation-piling.jpg"
+},
   {
-    title: "Solar Panel Installation",
-    description: "5kW solar system installation for commercial building",
-    image: "assets/images/work/second.jpg"
-  },
-  {
-    title: "Commercial Complex",
-    description: "Multi-story commercial building with modern amenities",
-    image: "assets/images/work/third.jpg"
-  },
-  {
-    title: "Industrial Warehouse",
-    description: "Large-scale warehouse construction with steel structure",
-    image: "assets/images/work/four.jpg"
-  },
-  {
-    title: "Residential Renovation",
-    description: "Complete home renovation with modern interiors",
-    image: "assets/images/work/five.jpg"
-  },
-  {
-    title: "Solar Farm Project",
-    description: "Large-scale solar farm installation for renewable energy",
-    image: "assets/images/work/six.jpg"
-  }
+  "title": "Solar Panel Erection",
+  "description": "Erection and installation of solar panel mounting structures on the prepared foundation, ensuring precise alignment and structural stability.",
+  "image": "assets/images/work/solar-panel-erection.jpg"
+}
+,
+ {
+  "title": "AC, DC & Earthing Work",
+  "description": "Installation of electrical equipment, erection of structures, cable laying, termination, and earthing.", 
+  "image": "assets/images/work/ac-dc-earthing.png"
+}
 ];
 
 // Projects Slider
