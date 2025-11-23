@@ -64,6 +64,11 @@
       width: 100%;
     }
   </style>
+  <style>
+  .hierarchy-box {
+    transition: all 0.3s ease;
+  }
+</style>
 </head>
 
 <body class="bg-gray-50">
@@ -456,12 +461,12 @@
           <p class="text-sm md:text-base text-gray-600">Professional solar panel installation and renewable energy
             solutions for sustainable power generation.</p>
         </div>
-        <div class="bg-gradient-to-br from-green-50 to-teal-50 p-6 md:p-8 rounded-lg hover-scale shadow-lg">
+        <!-- <div class="bg-gradient-to-br from-green-50 to-teal-50 p-6 md:p-8 rounded-lg hover-scale shadow-lg">
           <i class="fas fa-work text-4xl md:text-5xl text-green-600 mb-4"></i>
           <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-800">Renovation & Repair</h3>
           <p class="text-sm md:text-base text-gray-600">Expert renovation and repair services to restore and upgrade
             existing structures to modern standards.</p>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -566,6 +571,160 @@
     </div>
   </section>
 
+<!-- Organization Hierarchy Section -->
+<section id="organization" class="py-12 md:py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-8 md:mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+        <i class="fas fa-sitemap text-purple-600 mr-3"></i>
+        Organization Chart
+      </h2>
+      <p class="text-base md:text-lg text-gray-600">Our team structure and management hierarchy</p>
+    </div>
+
+    <!-- Hierarchy Chart -->
+    <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl p-6 md:p-10 overflow-x-auto">
+      <div class="flex flex-col items-center space-y-0 min-w-[600px]">
+        
+        <!-- Level 1: Proprietor & Finance -->
+        <div class="hierarchy-box bg-white border-4 border-gray-800 px-8 md:px-12 py-4 md:py-5 rounded-lg shadow-lg transform hover:scale-105 transition">
+          <div class="text-center">
+            <p class="text-base md:text-lg font-bold text-gray-800">Proprietor & Finance</p>
+          </div>
+        </div>
+
+        <!-- Single Vertical Line -->
+        <div class="w-0.5 h-16 bg-gray-800"></div>
+
+        <!-- T-junction splitting to two managers -->
+        <div class="relative w-full" style="height: 40px;">
+          <div class="absolute left-1/2 top-0 w-0.5 h-5 bg-gray-800 -translate-x-1/2"></div>
+          <div class="absolute left-[25%] right-[25%] top-5 h-0.5 bg-gray-800"></div>
+          <div class="absolute left-[25%] top-5 w-0.5 h-9 bg-gray-800"></div>
+          <div class="absolute right-[25%] top-5 w-0.5 h-9 bg-gray-800"></div>
+        </div>
+
+        <!-- Level 2: Project Manager and Manager-Purchase -->
+        <div class="grid grid-cols-2 gap-24 md:gap-48 w-full justify-items-center">
+          <div class="hierarchy-box bg-white border-4 border-gray-800 px-6 md:px-8 py-3 md:py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition">
+            <div class="text-center">
+              <p class="font-bold text-gray-800 text-sm md:text-base">Project Manager</p>
+            </div>
+          </div>
+
+          <div class="hierarchy-box bg-white border-4 border-gray-800 px-6 md:px-8 py-3 md:py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition">
+            <div class="text-center">
+              <p class="font-bold text-gray-800 text-sm md:text-base">Manager - Purchase</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Two vertical lines going down from both managers -->
+        <div class="relative w-full" style="height: 40px;">
+          <div class="absolute left-[25%] top-0 w-0.5 h-full bg-gray-800"></div>
+          <div class="absolute right-[25%] top-0 w-0.5 h-full bg-gray-800"></div>
+        </div>
+
+        <!-- Level 3: Site Engineer (receives from both managers) -->
+        <div class="relative w-full flex justify-center">
+          <div class="absolute left-[25%] right-[25%] top-0 h-0.5 bg-gray-800"></div>
+          <div class="hierarchy-box bg-white border-4 border-gray-800 px-8 md:px-12 py-3 md:py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition" style="margin-top: -1px;">
+            <div class="text-center">
+              <p class="font-bold text-gray-800 text-sm md:text-base">Site Engineer</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Vertical Line -->
+        <div class="w-0.5 h-16 bg-gray-800"></div>
+
+        <!-- T-junction splitting to supervisors -->
+        <div class="relative w-full" style="height: 40px;">
+          <div class="absolute left-1/2 top-0 w-0.5 h-5 bg-gray-800 -translate-x-1/2"></div>
+          <div class="absolute left-[30%] right-[30%] top-5 h-0.5 bg-gray-800"></div>
+          <div class="absolute left-[30%] top-5 w-0.5 h-9 bg-gray-800"></div>
+          <div class="absolute right-[30%] top-5 w-0.5 h-9 bg-gray-800"></div>
+        </div>
+
+        <!-- Level 4: Supervisors -->
+        <div class="grid grid-cols-2 gap-16 md:gap-32 w-full justify-items-center">
+          <div class="flex flex-col items-center">
+            <div class="hierarchy-box bg-white border-4 border-gray-800 px-6 md:px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition">
+              <div class="text-center">
+                <p class="font-bold text-gray-800 text-sm md:text-base">Supervisor (1)</p>
+              </div>
+            </div>
+
+            <!-- Vertical Line -->
+            <div class="w-0.5 h-12 bg-gray-800"></div>
+
+            <!-- Teams Box -->
+            <div class="hierarchy-box bg-white border-4 border-gray-800 px-6 md:px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition">
+              <div class="text-center space-y-1">
+                <p class="font-semibold text-gray-800 text-sm md:text-base">Team (1)</p>
+                <p class="font-semibold text-gray-800 text-sm md:text-base">Team (2)</p>
+                <p class="font-semibold text-gray-800 text-sm md:text-base">Team (3)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="hierarchy-box bg-white border-4 border-gray-800 px-6 md:px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition">
+              <div class="text-center">
+                <p class="font-bold text-gray-800 text-sm md:text-base">Supervisor (2)</p>
+              </div>
+            </div>
+
+            <!-- Vertical Line -->
+            <div class="w-0.5 h-12 bg-gray-800"></div>
+
+            <!-- Teams Box -->
+            <div class="hierarchy-box bg-white border-4 border-gray-800 px-6 md:px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition">
+              <div class="text-center space-y-1">
+                <p class="font-semibold text-gray-800 text-sm md:text-base">Team (1)</p>
+                <p class="font-semibold text-gray-800 text-sm md:text-base">Team (2)</p>
+                <p class="font-semibold text-gray-800 text-sm md:text-base">Team (3)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contractor Note -->
+        <!-- <div class="mt-8 text-center text-gray-600 text-sm md:text-base italic">
+          <p>Contractor: Construction Works, RMC supply, Steel Structures, Civil & Solar works</p>
+        </div> -->
+
+      </div>
+    </div>
+
+    <!-- Key Features -->
+    <!-- <div class="max-w-6xl mx-auto mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transform hover:scale-105 transition">
+        <i class="fas fa-user-tie text-3xl md:text-4xl text-purple-600 mb-2 md:mb-3"></i>
+        <h4 class="font-bold text-gray-800 text-sm md:text-base">Leadership</h4>
+        <p class="text-xs md:text-sm text-gray-600">Expert Management</p>
+      </div>
+      <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transform hover:scale-105 transition">
+        <i class="fas fa-users-cog text-3xl md:text-4xl text-blue-600 mb-2 md:mb-3"></i>
+        <h4 class="font-bold text-gray-800 text-sm md:text-base">Supervisors</h4>
+        <p class="text-xs md:text-sm text-gray-600">Quality Control</p>
+      </div>
+      <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transform hover:scale-105 transition">
+        <i class="fas fa-hard-hat text-3xl md:text-4xl text-green-600 mb-2 md:mb-3"></i>
+        <h4 class="font-bold text-gray-800 text-sm md:text-base">Site Engineers</h4>
+        <p class="text-xs md:text-sm text-gray-600">Technical Expertise</p>
+      </div>
+      <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transform hover:scale-105 transition">
+        <i class="fas fa-users text-3xl md:text-4xl text-orange-600 mb-2 md:mb-3"></i>
+        <h4 class="font-bold text-gray-800 text-sm md:text-base">Field Teams</h4>
+        <p class="text-xs md:text-sm text-gray-600">Skilled Workers</p>
+      </div>
+    </div> -->
+  </div>
+</section>
+
+
+  
   <!-- Map Section -->
   <section class="py-12 bg-gray-50 text-center mb-10">
     <h2 class="text-3xl md:text-4xl font-bold text-purple-700 mb-6">
