@@ -284,3 +284,263 @@ function scrollToWork() {
 initSlider();
 initMechanicalSlider();
 initInstrumentsSlider();
+
+// Work Orders data
+const workOrders = [
+  {
+    company: "Srectro Power Service",
+    location: "Nagar Koil",
+    work: "MMS DC Work",
+    site: "Pioneer Site, Manoor",
+    value: "₹8,00,000",
+    color: "purple",
+    icon: "fa-solar-panel"
+  },
+  {
+    company: "NSK Infra",
+    location: "Manaparai",
+    work: "MMS Module Installation Work",
+    site: "Sivagangai Everrenew Site",
+    value: "₹15,00,000",
+    color: "blue",
+    icon: "fa-tools"
+  },
+  {
+    company: "Karthika Infra",
+    location: "Kovilpatti",
+    work: "MMS DC Work",
+    site: "GRT Pasuvanthanai",
+    value: "₹13,00,000",
+    color: "green",
+    icon: "fa-solar-panel"
+  },
+  {
+    company: "Sri Latha Construction",
+    location: "Hyderabad",
+    work: "MMS DC Work",
+    site: "Warri Maniachi",
+    value: "₹20,00,000",
+    color: "orange",
+    icon: "fa-building"
+  },
+  {
+    company: "SR Group",
+    location: "Kadappa",
+    work: "Solar Installation",
+    site: "Multiple Sites",
+    value: "Contact for Details",
+    color: "pink",
+    icon: "fa-industry"
+  },
+  {
+    company: "Prinul Infra Solution",
+    location: "Kadappa",
+    work: "Infrastructure Development",
+    site: "Various Locations",
+    value: "Contact for Details",
+    color: "yellow",
+    icon: "fa-hard-hat"
+  },
+  {
+    company: "Faraday Electrical Pvt. Ltd",
+    location: "Kerala",
+    work: "MMS and ACDC Work",
+    site: "Ayyana Site & Adani Site",
+    value: "₹20,00,000",
+    multiSite: true,
+    sites: [
+      { name: "Ayyana Site", value: "₹6,00,000" },
+      { name: "Adani Site", value: "₹14,00,000" }
+    ],
+    color: "cyan",
+    icon: "fa-bolt"
+  },
+  {
+    company: "Sendur Velan (Contractor)",
+    location: "Karur",
+    work: "Civil & Solar Works",
+    site: "Multiple Projects",
+    value: "Contact for Details",
+    color: "violet",
+    icon: "fa-user-tie"
+  },
+  {
+    company: "Giri Raj Engineering",
+    location: "Neyveli",
+    work: "MMS and DC Work",
+    site: "Neyveli Solar Park",
+    value: "₹10,00,000",
+    color: "emerald",
+    icon: "fa-cogs"
+  }
+];
+
+const colorClasses = {
+  purple: { bg: "from-purple-50 to-purple-100", border: "border-purple-600", text: "text-purple-600", badge: "bg-purple-600" },
+  blue: { bg: "from-blue-50 to-blue-100", border: "border-blue-600", text: "text-blue-600", badge: "bg-blue-600" },
+  green: { bg: "from-green-50 to-green-100", border: "border-green-600", text: "text-green-600", badge: "bg-green-600" },
+  orange: { bg: "from-orange-50 to-orange-100", border: "border-orange-600", text: "text-orange-600", badge: "bg-orange-600" },
+  pink: { bg: "from-pink-50 to-pink-100", border: "border-pink-600", text: "text-pink-600", badge: "bg-pink-600" },
+  yellow: { bg: "from-yellow-50 to-yellow-100", border: "border-yellow-600", text: "text-yellow-600", badge: "bg-yellow-600" },
+  cyan: { bg: "from-cyan-50 to-cyan-100", border: "border-cyan-600", text: "text-cyan-600", badge: "bg-cyan-600" },
+  violet: { bg: "from-violet-50 to-violet-100", border: "border-violet-600", text: "text-violet-600", badge: "bg-violet-600" },
+  emerald: { bg: "from-emerald-50 to-emerald-100", border: "border-emerald-600", text: "text-emerald-600", badge: "bg-emerald-600" }
+};
+
+// Work Orders Slider
+let currentWorkOrdersSlide = 0;
+
+function initWorkOrdersSlider() {
+  const slider = document.getElementById('workOrdersSlider');
+  slider.innerHTML = workOrders.map((order, index) => {
+    const colors = colorClasses[order.color];
+    
+    if (order.multiSite) {
+      return `
+        <div class="slide ${index === 0 ? 'active' : ''}">
+          <div class="bg-gradient-to-br ${colors.bg} rounded-2xl p-6 md:p-8 border-l-4 ${colors.border} shadow-xl min-h-[400px] flex flex-col">
+            <div class="flex items-start justify-between mb-6 flex-wrap gap-4">
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-3">
+                  <i class="fas ${order.icon} text-3xl md:text-4xl ${colors.text}"></i>
+                  <h3 class="text-2xl md:text-3xl font-bold text-gray-800">${order.company}</h3>
+                </div>
+                <div class="flex items-center gap-2 ${colors.text} text-base md:text-lg">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="font-semibold">${order.location}</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex-1 space-y-4 text-gray-700 mb-6">
+              <div class="flex items-start gap-3">
+                <i class="fas fa-tools ${colors.text} text-xl mt-1"></i>
+                <div>
+                  <p class="font-semibold text-gray-800">Work Type:</p>
+                  <p class="text-base md:text-lg">${order.work}</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-3">
+                <i class="fas fa-building ${colors.text} text-xl mt-1"></i>
+                <div>
+                  <p class="font-semibold text-gray-800">Sites:</p>
+                  <p class="text-base md:text-lg">${order.site}</p>
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-4 mt-4">
+                ${order.sites.map(site => `
+                  <div class="bg-white p-4 rounded-xl shadow-md">
+                    <p class="font-semibold ${colors.text} mb-2">${site.name}</p>
+                    <p class="text-xl md:text-2xl font-bold ${colors.text}">${site.value}</p>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-gray-300">
+              <div class="flex items-center justify-between">
+                <span class="text-gray-700 font-semibold text-base md:text-lg">Total Project Value:</span>
+                <span class="${colors.badge} text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-bold text-xl md:text-2xl shadow-lg">
+                  ${order.value}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    
+    return `
+      <div class="slide ${index === 0 ? 'active' : ''}">
+        <div class="bg-gradient-to-br ${colors.bg} rounded-2xl p-6 md:p-8 border-l-4 ${colors.border} shadow-xl min-h-[400px] flex flex-col">
+          <div class="flex items-start justify-between mb-6 flex-wrap gap-4">
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <i class="fas ${order.icon} text-3xl md:text-4xl ${colors.text}"></i>
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-800">${order.company}</h3>
+              </div>
+              <div class="flex items-center gap-2 ${colors.text} text-base md:text-lg">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="font-semibold">${order.location}</span>
+              </div>
+            </div>
+            ${order.value.includes('₹') ? `
+              <div class="${colors.badge} text-white px-4 md:px-6 py-2 md:py-3 rounded-xl font-bold text-xl md:text-2xl shadow-lg">
+                ${order.value}
+              </div>
+            ` : ''}
+          </div>
+          
+          <div class="flex-1 space-y-4 text-gray-700">
+            <div class="flex items-start gap-3">
+              <i class="fas fa-tools ${colors.text} text-xl mt-1"></i>
+              <div>
+                <p class="font-semibold text-gray-800">Work Type:</p>
+                <p class="text-base md:text-lg">${order.work}</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3">
+              <i class="fas fa-building ${colors.text} text-xl mt-1"></i>
+              <div>
+                <p class="font-semibold text-gray-800">Site Location:</p>
+                <p class="text-base md:text-lg">${order.site}</p>
+              </div>
+            </div>
+
+            ${!order.value.includes('₹') ? `
+              <div class="mt-4 p-4 bg-white rounded-xl shadow-md">
+                <p class="${colors.text} font-semibold text-lg">${order.value}</p>
+              </div>
+            ` : ''}
+          </div>
+
+          <div class="mt-6 flex items-center gap-2 text-sm text-gray-600">
+            <i class="fas fa-check-circle ${colors.text}"></i>
+            <span>Successfully Completed Project</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+  updateWorkOrdersSlideCounter();
+}
+
+function showWorkOrdersSlide(n) {
+  const slides = document.querySelectorAll('#workOrdersSlider .slide');
+  if (n >= slides.length) currentWorkOrdersSlide = 0;
+  if (n < 0) currentWorkOrdersSlide = slides.length - 1;
+
+  slides.forEach((slide, index) => {
+    slide.classList.remove('active');
+    if (index === currentWorkOrdersSlide) {
+      slide.classList.add('active');
+    }
+  });
+  updateWorkOrdersSlideCounter();
+}
+
+function updateWorkOrdersSlideCounter() {
+  document.getElementById('workOrdersSlideCounter').textContent = `${currentWorkOrdersSlide + 1} / ${workOrders.length}`;
+}
+
+document.getElementById('workOrdersPrevBtn').addEventListener('click', () => {
+  currentWorkOrdersSlide--;
+  showWorkOrdersSlide(currentWorkOrdersSlide);
+});
+
+document.getElementById('workOrdersNextBtn').addEventListener('click', () => {
+  currentWorkOrdersSlide++;
+  showWorkOrdersSlide(currentWorkOrdersSlide);
+});
+
+// Auto advance work orders slides
+setInterval(() => {
+  currentWorkOrdersSlide++;
+  showWorkOrdersSlide(currentWorkOrdersSlide);
+}, 6000);
+
+// Initialize work orders slider - Add this to your initialization
+initWorkOrdersSlider();
