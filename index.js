@@ -105,7 +105,7 @@ const projects = [
 }
 ,
  {
-  "title": "Piling Work",
+  "title": "Pileing Work",
   "description": "Installation of a solar panel foundation system, including the main control room and inverter control room for efficient energy management.",
   "image": "assets/images/work/solar-foundation-piling.jpg"
 },
